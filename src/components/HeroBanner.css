@@ -10,7 +10,6 @@
   padding: 100px 0;
   background: linear-gradient(rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%),
     url("../assets/images/Herobanner-Group_39403_min.png");
-  height: 100vh;
 }
 
 .hero-banner::before {
@@ -33,9 +32,8 @@ h6 {
   font-size: 18px;
 }
 p {
-  font-size: 1.2em;
   margin-bottom: 30px;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 h1 {
@@ -43,39 +41,57 @@ h1 {
   font-weight: bolder;
 }
 
-.first-button {
-  font-style: normal;
-  font-weight: normal;
+/* Add margin-bottom to create space between elements */
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+/* Default styles for buttons */
+.first-button,
+.second-button {
+  display: inline-block;
+  margin-right: 10px; /* Adjust spacing between buttons */
+  padding: 10px 30px; /* Adjust padding to control button size (reduced from 16px to 10px) */
+  text-align: center;
   text-decoration: none;
-  color: #ffffff;
   font-size: 16px;
-  background: rgba(255, 90, 95, 1);
-  border-radius: 30px;
-  text-transform: uppercase;
-  border: 1px solid #ff5a5f;
-  padding-top: 16px;
-  padding-right: 40px;
-  padding-bottom: 16px;
-  padding-left: 40px;
-  width: auto;
-  transition: all 0.3s ease-in-out;
   font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.first-button {
+  color: #ffffff;
+  background: rgba(255, 90, 95, 1);
+  border: 1px solid #ff5a5f;
+  border-radius: 30px;
 }
 
 .second-button {
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: none;
   color: #ffffff;
-  font-size: 16px;
   background: rgba(255, 255, 255, 0);
-  border-radius: 30px;
-  text-transform: uppercase;
   border: 3px solid #ff5a5f;
-  padding-top: 16px;
-  padding-right: 40px;
-  padding-bottom: 16px;
-  padding-left: 40px;
-  width: auto;
-  font-weight: 700;
+  border-radius: 30px;
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 767px) {
+  .hero-content {
+    text-align: center; /* Center-align content on small screens */
+  }
+  .first-button {
+    margin-bottom: 10px; /* Add margin between the two buttons */
+  }
+  .first-button,
+  .second-button {
+    display: block;
+    width: 100%; /* Make buttons full width on small screens */
+    margin-right: 0; /* Remove right margin on small screens */
+    margin-bottom: 10px; /* Adjust spacing between buttons on small screens */
+    margin-right: 0; /* Remove right margin on small screens */
+    height: fit-content;
+    font-size: small;
+  }
 }

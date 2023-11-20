@@ -1,10 +1,9 @@
-/* src/components/LogoSliders.css */
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
 .icon-slider-container {
   overflow: hidden;
-  width: 80%; /* Adjust the width as needed */
+  width: 100%; /* Adjust the width as needed */
   margin: 0 auto;
 }
 .logo-slide img {
