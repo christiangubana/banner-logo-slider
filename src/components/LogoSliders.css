@@ -1,18 +1,24 @@
+/* src/components/LogoSliders.css */
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
-/* src/components/LogoSliders.css */
+
 .icon-slider-container {
   overflow: hidden;
   width: 80%; /* Adjust the width as needed */
   margin: 0 auto;
 }
-
 .logo-slide img {
-  width: 200px; /* Adjust the width of the icons */
+  width: 150px; /* Adjust the width of the icons */
   height: 60px; /* Maintain the aspect ratio */
   margin-right: 10px; /* Adjust the spacing between icons */
   margin-top: 50px;
   object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.logo-slide:hover img {
+  transform: scale(1.1); /* Increase the size of the icon on hover */
 }
 
 .logo-slide {

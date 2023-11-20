@@ -10,9 +10,7 @@ const HeroBanner = () => {
         <div className="col-md-6">
           <div className="hero-content text-center text-md-left">
             <h6 className="text-start">Monolith</h6>
-            <h1 className="text-start">
-              Use AI software to test less and learn more.
-            </h1>
+            <h1 className="text-start">Test less. Learn more.</h1>
             <p className="text-start">
               Spend less time running expensive, repetitive tests and more time
               learning from your engineering data to predict the exact tests to

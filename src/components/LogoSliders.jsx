@@ -37,7 +37,7 @@ export const LogoSliders = () => {
     autoplay: true,
     autoplaySpeed: 3000, // Adjust the autoplay speed
     cssEase: "linear",
-    pauseOnHover: false,
+    pauseOnHover: true, // Enable pause on hover
   };
 
   return (
