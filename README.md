@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### First clone this repository
 
-In the project directory, you can run:
+on [here](git@github.com:christiangubana/banner-logo-slider.git)
 
 ### Second cd into your folder and run
 
