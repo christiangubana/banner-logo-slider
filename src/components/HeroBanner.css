@@ -1,6 +1,7 @@
 /* HeroBanner.css */
 
 .hero-banner {
+  position: relative;
   background: url("../assets/images/Herobanner-Group_39403_min.png");
   background-size: cover;
   background-position: center;
@@ -10,9 +11,9 @@
   background: linear-gradient(rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%),
     url("../assets/images/Herobanner-Group_39403_min.png");
 }
+
 .hero-banner::before {
   background-color: rgba(0, 0, 0, 0.4);
-  content: "";
   display: block;
   height: 100%;
   position: absolute;
@@ -23,22 +24,20 @@
   max-width: 600px;
   margin: 0 auto;
 }
-
-h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
+.hero-content h6 {
+  color: #ff5a5f;
 }
-
+h6 {
+  font-weight: 700;
+  font-size: 18px;
+}
 p {
   font-size: 1.2em;
   margin-bottom: 30px;
+  font-weight: 300;
 }
 
-button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 1em;
-  border: none;
-  cursor: pointer;
+h1 {
+  font-size: 44px;
+  font-weight: bolder;
 }
