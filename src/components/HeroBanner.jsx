@@ -19,14 +19,10 @@ const HeroBanner = () => {
               run.
             </p>
           </div>
-          <div className="col-md-10">
+          <div className="col-md-12">
             <div className="d-flex justify-content-between">
-              <button className="btn btn-danger text-uppercase text-white">
-                Request a demo
-              </button>
-              <button className="btn btn-primary text-uppercase text-white">
-                Speak to our team
-              </button>
+              <button className="first-button">Request a demo</button>
+              <button className="second-button">Speak to our team</button>
             </div>
           </div>
         </div>
