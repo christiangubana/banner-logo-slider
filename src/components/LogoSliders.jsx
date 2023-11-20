@@ -1,5 +1,7 @@
-import React from "react";
+// src/components/LogoSliders.js
+import React, { useState, useEffect } from "react";
 import "./LogoSliders.css";
+
 import JotaLogo from "../assets/images/icons/JOTA_logo.png";
 import MichelinTireLogo from "../assets/images/icons/michelin-tire-logo.png";
 import MercedesBenzLogo from "../assets/images/icons/mercedes-benz_logo.webp";
@@ -11,21 +13,42 @@ import BaeSystemsLogo from "../assets/images/icons/bae-systems_logo.svg";
 import AptarLogo from "../assets/images/icons/Aptar Logo.svg";
 import SiemensLogo from "../assets/images/icons/Siemens_logo.svg";
 
+const logos = [
+  BmwLogo,
+  BaeSystemsLogo,
+  MercedesBenzLogo,
+  HondeaLogo,
+  SiemensLogo,
+  HoneywellLogo,
+  KautexTextronLogo,
+  MichelinTireLogo,
+  AptarLogo,
+  JotaLogo,
+];
+
 export const LogoSliders = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % logos.length);
+    }, 3000); // Adjust the interval (in milliseconds)
+
+    return () => clearInterval(interval);
+  }, []); // Empty dependency array to run the effect only once
+
   return (
-    <div className="logo-slider">
-      {/* Logo slider content goes here */}
-      <img src={JotaLogo} alt="Logo 1" />
-      <img src={MichelinTireLogo} alt="Logo 2" />
-      <img src={MercedesBenzLogo} alt="Logo 3" />
-      <img src={KautexTextronLogo} alt="Logo 4" />
-      <img src={HoneywellLogo} alt="Logo 5" />
-      <img src={HondeaLogo} alt="Logo 6" />
-      <img src={BmwLogo} alt="Logo 7" />
-      <img src={BaeSystemsLogo} alt="Logo 8" />
-      <img src={AptarLogo} alt="Logo 9" />
-      <img src={SiemensLogo} alt="Logo 9" />
-      {/* Add more logos as needed */}
+    <div className="icon-slider-container">
+      <div className="icon-slider">
+        {logos.map((logo, index) => (
+          <img
+            key={index}
+            src={logo}
+            alt={`Logo ${index + 1}`}
+            className={index === currentSlide ? "active" : ""}
+          />
+        ))}
+      </div>
     </div>
   );
 };
