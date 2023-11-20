@@ -1,5 +1,6 @@
 // src/components/LogoSliders.js
-import React, { useState, useEffect } from "react";
+import React from "react";
+import Slider from "react-slick";
 import "./LogoSliders.css";
 
 import JotaLogo from "../assets/images/icons/JOTA_logo.png";
@@ -27,28 +28,27 @@ const logos = [
 ];
 
 export const LogoSliders = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % logos.length);
-    }, 3000); // Adjust the interval (in milliseconds)
-
-    return () => clearInterval(interval);
-  }, []); // Empty dependency array to run the effect only once
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 1000, // Adjust the animation speed
+    slidesToShow: 5, // Adjust the number of visible slides
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000, // Adjust the autoplay speed
+    cssEase: "linear",
+    pauseOnHover: false,
+  };
 
   return (
     <div className="icon-slider-container">
-      <div className="icon-slider">
+      <Slider {...settings}>
         {logos.map((logo, index) => (
-          <img
-            key={index}
-            src={logo}
-            alt={`Logo ${index + 1}`}
-            className={index === currentSlide ? "active" : ""}
-          />
+          <div key={index} className="logo-slide">
+            <img src={logo} alt={`Logo ${index + 1}`} />
+          </div>
         ))}
-      </div>
+      </Slider>
     </div>
   );
 };
